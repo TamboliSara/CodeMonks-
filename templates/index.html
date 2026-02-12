@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustChain: Blockchain Verified Skincare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TrustChain Verification</h1>
+            <p>Automated Legal Metrology & Claim Compliance</p>
+        </header>
+
+        <main>
+            <div class="form-section">
+                <h2>Product Details</h2>
+                <form id="productForm">
+                    <label>Product Name:</label>
+                    <input type="text" id="product_name" placeholder="e.g., Aloe Glow Serum" required>
+
+                    <label>Marketing Claims (Comma separated):</label>
+                    <textarea id="claims" placeholder="e.g., 100% Natural, FDA Approved, Vegan"></textarea>
+
+                    <h3>Legal Metrology Data (Mandatory)</h3>
+                    <div class="grid">
+                        <input type="text" id="net_quantity" placeholder="Net Quantity (e.g., 50ml)">
+                        <input type="number" id="mrp" placeholder="MRP (₹)">
+                        <input type="text" id="batch_number" placeholder="Batch Number">
+                        <input type="date" id="expiry_date" placeholder="Expiry Date">
+                        <input type="text" id="manufacturer" placeholder="Manufacturer Details">
+                        <input type="text" id="customer_care" placeholder="Customer Care Email/Phone">
+                    </div>
+
+                    <button type="submit" id="verifyBtn">Verify Compliance</button>
+                </form>
+            </div>
+
+            <div id="results" class="hidden">
+                <h2>Verification Result</h2>
+                <div id="badge" class="badge">PENDING</div>
+                
+                <div class="score-card">
+                    <span id="trustScore">0</span>/100
+                    <p>Trust Score</p>
+                </div>
+
+                <div class="details">
+                    <h3>Metrology Check</h3>
+                    <p id="metrologyStatus">Waiting...</p>
+                    
+                    <h3>Claim Analysis</h3>
+                    <ul id="claimIssues"></ul>
+                    
+                    <div class="blockchain-proof">
+                        <strong>🔒 Stored on Algorand Blockchain</strong>
+                        <p>TxID: <span id="txId" class="mono">---</span></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
