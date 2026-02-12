@@ -1,0 +1,22 @@
+body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; color: #333; }
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
+header { text-align: center; margin-bottom: 30px; }
+header h1 { color: #2c3e50; }
+
+.form-section, #results { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px; }
+
+input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;}
+button { width: 100%; padding: 12px; background: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+button:hover { background: #219150; }
+
+.hidden { display: none; }
+.badge { text-align: center; padding: 10px; color: white; font-weight: bold; border-radius: 5px; margin-bottom: 15px; }
+.VERIFIED { background: #27ae60; }
+.PARTIAL { background: #f39c12; }
+.FAIL { background: #c0392b; }
+
+.score-card { text-align: center; font-size: 2em; font-weight: bold; color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+.score-card p { font-size: 0.4em; color: #7f8c8d; margin: 0; }
+.mono { font-family: monospace; color: #e67e22; word-break: break-all; }
+.blockchain-proof { background: #f0f3f4; padding: 10px; border-radius: 5px; margin-top: 15px; border-left: 4px solid #3498db; }
